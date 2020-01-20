@@ -65,7 +65,7 @@ namespace Serilog.Sinks.File
             {
                 Directory.CreateDirectory(directory);
             }
-
+            
             // FileSystemRights.AppendData sets the Win32 FILE_APPEND_DATA flag. On Linux this is O_APPEND, but that API is not yet
             // exposed by .NET Core.
             _fileOutput = new FileStream(
